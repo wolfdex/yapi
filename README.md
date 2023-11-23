@@ -1,4 +1,4 @@
-# YAPI - Yast Another Pattern Installer
+# YAPI - Yet Another Pattern Installer
 
 Install Software from Patterns in multiple Distributions
 
