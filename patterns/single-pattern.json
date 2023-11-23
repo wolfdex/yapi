@@ -1,0 +1,63 @@
+{
+  "apiVersion": "0.1",
+  "type":"single",
+  "softwarePackages": [
+    {
+      "name": "ExampleSoftware",
+      "category": "Utilities",
+      "description": {
+        "en": "Description of ExampleSoftware in English.",
+        "fr": "Description du logiciel ExampleSoftware en français.",
+        "es": "Descripción de ExampleSoftware en español."
+      },
+      "defaultSource": "flatpak|distro|mixed|auto",
+      "customScripts": {
+		  "preInstallScript": "https://%%repodomain%%/pre-install-script.sh",
+		  "postInstallScript": "https://%%repodomain%%/post-install-script.sh"
+		},
+      
+      "sources": {
+         "flatpak": {
+          "url": "https://flathub.org/example-software.flatpakref",
+          "packagename": "org.example.software",
+          "repository": "flathub"
+        },
+        "rpm": {
+          "Fedora": {
+            "url": "https://%%repodomain%%/example-software-fedora.rpm",
+            "packagename": "example-software",
+            "repository": "fedora-repo"
+          },
+          "openSUSE_Leap": {
+            "url": "https://%%repodomain%%/example-software-leap.rpm",
+            "packagename": "example-software",
+            "repository": "opensuse-leap-repo"
+          },
+          "openSUSE_Tumbleweed": {
+            "url": "https://%%repodomain%%/example-software-tumbleweed.rpm",
+            "packagename": "example-software",
+            "repository": "opensuse-tumbleweed-repo"
+          }
+        },
+
+        "deb": {
+          "debian": {
+            "url": "https://%%repodomain%%/example-software-debian.deb",
+            "packagename": "example-software",
+            "repository": "debian-repo"
+          },
+          "ubuntu": {
+            "url": "https://%%repodomain%%/example-software-ubuntu.deb",
+            "packagename": "example-software",
+            "repository": "ubuntu-repo"
+          }
+        },
+        "arch": {
+          "url": "https://%%repodomain%%/example-software-arch.tar.gz",
+          "packagename": "example-software",
+          "repository": "arch-repo"
+        }
+      }
+    }
+  ]
+}

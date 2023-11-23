@@ -1,0 +1,15 @@
+{
+    "apiVersion": "0.1",
+    "type": "meta",
+    "softwarePackages": [
+        {
+            "yapiFile": "package1.json"
+        },
+        {
+            "yapiFile": "package2.json"
+        },
+        {
+            "yapiFile": "package3.json"
+        }
+    ]
+}
